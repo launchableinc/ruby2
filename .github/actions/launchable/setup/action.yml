@@ -19,6 +19,12 @@ inputs:
     description: >-
       Launchable token is needed if you want to run Launchable on your forked repository.
       See https://github.com/ruby/ruby/wiki/CI-Servers#launchable-ci for details.
+  
+  launchable-url:
+    required: false
+    description: >-
+      Launchable token is needed if you want to run Launchable on your forked repository.
+      See https://github.com/ruby/ruby/wiki/CI-Servers#launchable-ci for details.
 
   builddir:
     required: false
@@ -107,6 +113,7 @@ runs:
         : # https://github.com/launchableinc/cli/blob/v1.80.1/launchable/utils/authentication.py#L71
         echo "GITHUB_PR_HEAD_SHA=${{ github.event.pull_request.head.sha || github.sha }}" >> $GITHUB_ENV
         echo "LAUNCHABLE_TOKEN=${{ inputs.launchable-token }}" >> $GITHUB_ENV
+        echo "LAUNCHABLE_BASE_URL=${{ inputs.launchable-url }}" >> $GITHUB_ENV
       if: steps.enable-launchable.outputs.enable-launchable
 
     - name: Set up path
