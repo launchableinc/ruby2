@@ -1452,7 +1452,19 @@ module Test
       def setup_options(opts, options)
         super
         opts.on_tail '--launchable-test-reports=PATH', String, 'Report test results in Launchable JSON format' do |path|
-          require_relative '../launchable'
+          begin
+            require_relative '../launchable'
+          rescue LoadError
+            # The following error sometimes happens, so we're going to skip writing Launchable report files in this case.
+            #
+            # ```
+            # /tmp/tmp.bISss9CtXZ/.ext/common/json/ext.rb:15:in 'Kernel#require':
+            #   /tmp/tmp.bISss9CtXZ/.ext/x86_64-linux/json/ext/parser.so:
+            #     undefined symbol: ruby_abi_version - ruby_abi_version (LoadError)
+            # ```
+            #
+            return true
+          end
           options[:launchable_test_reports] = writer = Launchable::JsonStreamWriter.new(path)
           writer.write_array('testCases')
           main_pid = Process.pid
