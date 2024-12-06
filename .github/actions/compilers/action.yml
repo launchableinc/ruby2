@@ -111,7 +111,7 @@ runs:
         --env INPUT_OPTFLAGS='${{ inputs.OPTFLAGS }}'
         --env INPUT_CPPFLAGS='${{ inputs.cppflags }}'
         --env INPUT_APPEND_CONFIGURE='${{ inputs.append_configure }}'
-        --env INPUT_CHECK='${{ inputs.check }}'
+        --env INPUT_CHECK='true'
         --env INPUT_MSPECOPT='${{ inputs.mspecopt }}'
         --env INPUT_ENABLE_SHARED='${{ inputs.enable_shared }}'
         --env INPUT_STATIC_EXTS='${{ inputs.static_exts }}'
