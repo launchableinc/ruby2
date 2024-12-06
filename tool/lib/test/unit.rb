@@ -1463,7 +1463,7 @@ module Test
             #     undefined symbol: ruby_abi_version - ruby_abi_version (LoadError)
             # ```
             #
-            return true
+            next
           end
           options[:launchable_test_reports] = writer = Launchable::JsonStreamWriter.new(path)
           writer.write_array('testCases')
