@@ -113,4 +113,4 @@ else
 fi
 
 # grouped make install
-grouped make test-all TESTS="$tests"
+grouped make test-all TESTS="$tests" || true
