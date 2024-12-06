@@ -71,6 +71,18 @@ inputs:
     description: >-
       whitespace separated list of extensions that need be linked statically.
 
+  launchable-token:
+    required: false
+    description: >-
+      Launchable token is needed if you want to run Launchable on your forked repository.
+      See https://github.com/ruby/ruby/wiki/CI-Servers#launchable-ci for details.
+  
+  launchable-url:
+    required: false
+    description: >-
+      Launchable token is needed if you want to run Launchable on your forked repository.
+      See https://github.com/ruby/ruby/wiki/CI-Servers#launchable-ci for details.
+
 runs:
   using: composite
   steps:
