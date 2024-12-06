@@ -129,6 +129,6 @@ runs:
         --env GITHUB_EVENT_NAME
         --env GITHUB_SHA
         --env GITHUB_HEAD_REF
-        --env LAUNCHABLE_TOKEN='${{ inputs.LAUNCHABLE_TOKEN }}'
-        --env LAUNCHABLE_BASE_URL='${{ inputs.LAUNCHABLE_BASE_URL }}'
+        --env LAUNCHABLE_TOKEN='${{ inputs.launchable-token }}'
+        --env LAUNCHABLE_BASE_URL='${{ inputs.launchable-url }}'
         'ghcr.io/ruby/ruby-ci-image:${{ inputs.tag }}'
