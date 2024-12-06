@@ -65,10 +65,7 @@ runs:
       shell: bash
       if: >-
         ${{
-        (github.repository == 'ruby/ruby'
-          || (github.repository != 'ruby/ruby'
-          && env.LAUNCHABLE_TOKEN))
-        && (inputs.test-task == 'check'
+        (inputs.test-task == 'check'
           || inputs.test-task == 'test-all'
           || inputs.test-task == 'test'
           || contains(fromJSON(inputs.test-tasks), 'test-all')
