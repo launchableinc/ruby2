@@ -62,6 +62,8 @@ jobs:
           with_gcc: 'gcc-13 -flto=auto -ffat-lto-objects -Werror=lto-type-mismatch'
           optflags: '-O2'
           enable_shared: false
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'ext/Setup'
         with:
@@ -70,28 +72,52 @@ jobs:
           launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 14'
-        with: { tag: 'gcc-14' }
+        with:
+          tag: 'gcc-14'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 13'
-        with: { tag: 'gcc-13' }
+        with:
+          tag: 'gcc-13'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 12'
-        with: { tag: 'gcc-12' }
+        with:
+          tag: 'gcc-12'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 11'
-        with: { tag: 'gcc-11' }
+        with:
+          tag: 'gcc-11'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 10'
-        with: { tag: 'gcc-10' }
+        with:
+          tag: 'gcc-10'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 9'  
-        with: { tag: 'gcc-9'  }
+        with:
+          tag: 'gcc-9'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 8'
-        with: { tag: 'gcc-8'  }
+        with:
+          tag: 'gcc-8'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 7' 
-        with: { tag: 'gcc-7'  }
+        with:
+          tag: 'gcc-7'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
 
   compile2:
     name: 'omnibus compilations, #2'
@@ -110,6 +136,8 @@ jobs:
           with_gcc: 'gcc-13 -flto=auto -ffat-lto-objects -Werror=lto-type-mismatch'
           optflags: '-O2'
           enable_shared: false
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'ext/Setup'
         with:
@@ -118,28 +146,52 @@ jobs:
           launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 14'
-        with: { tag: 'gcc-14' }
+        with:
+          tag: 'gcc-14'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 13'
-        with: { tag: 'gcc-13' }
+        with:
+          tag: 'gcc-13'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 12'
-        with: { tag: 'gcc-12' }
+        with:
+          tag: 'gcc-12'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 11'
-        with: { tag: 'gcc-11' }
+        with:
+          tag: 'gcc-11'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 10'
-        with: { tag: 'gcc-10' }
+        with:
+          tag: 'gcc-10'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 9'  
-        with: { tag: 'gcc-9'  }
+        with:
+          tag: 'gcc-9'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 8'
-        with: { tag: 'gcc-8'  }
+        with:
+          tag: 'gcc-8'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 7' 
-        with: { tag: 'gcc-7'  }
+        with:
+          tag: 'gcc-7'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
 
   compile3:
     name: 'omnibus compilations, #3'
@@ -158,6 +210,8 @@ jobs:
           with_gcc: 'gcc-13 -flto=auto -ffat-lto-objects -Werror=lto-type-mismatch'
           optflags: '-O2'
           enable_shared: false
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'ext/Setup'
         with:
@@ -166,28 +220,52 @@ jobs:
           launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 14'
-        with: { tag: 'gcc-14' }
+        with:
+          tag: 'gcc-14'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 13'
-        with: { tag: 'gcc-13' }
+        with:
+          tag: 'gcc-13'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 12'
-        with: { tag: 'gcc-12' }
+        with:
+          tag: 'gcc-12'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 11'
-        with: { tag: 'gcc-11' }
+        with:
+          tag: 'gcc-11'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 10'
-        with: { tag: 'gcc-10' }
+        with:
+          tag: 'gcc-10'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 9'  
-        with: { tag: 'gcc-9'  }
+        with:
+          tag: 'gcc-9'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 8'
-        with: { tag: 'gcc-8'  }
+        with:
+          tag: 'gcc-8'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 7' 
-        with: { tag: 'gcc-7'  }
+        with:
+          tag: 'gcc-7'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
 
   compile4:
     name: 'omnibus compilations, #4'
@@ -206,6 +284,8 @@ jobs:
           with_gcc: 'gcc-13 -flto=auto -ffat-lto-objects -Werror=lto-type-mismatch'
           optflags: '-O2'
           enable_shared: false
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'ext/Setup'
         with:
@@ -214,28 +294,52 @@ jobs:
           launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 14'
-        with: { tag: 'gcc-14' }
+        with:
+          tag: 'gcc-14'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 13'
-        with: { tag: 'gcc-13' }
+        with:
+          tag: 'gcc-13'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 12'
-        with: { tag: 'gcc-12' }
+        with:
+          tag: 'gcc-12'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 11'
-        with: { tag: 'gcc-11' }
+        with:
+          tag: 'gcc-11'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 10'
-        with: { tag: 'gcc-10' }
+        with:
+          tag: 'gcc-10'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 9'  
-        with: { tag: 'gcc-9'  }
+        with:
+          tag: 'gcc-9'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 8'
-        with: { tag: 'gcc-8'  }
+        with:
+          tag: 'gcc-8'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 7' 
-        with: { tag: 'gcc-7'  }
+        with:
+          tag: 'gcc-7'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
 
   compile5:
     name: 'omnibus compilations, #5'
@@ -254,6 +358,8 @@ jobs:
           with_gcc: 'gcc-13 -flto=auto -ffat-lto-objects -Werror=lto-type-mismatch'
           optflags: '-O2'
           enable_shared: false
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'ext/Setup'
         with:
@@ -262,28 +368,52 @@ jobs:
           launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 14'
-        with: { tag: 'gcc-14' }
+        with:
+          tag: 'gcc-14'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 13'
-        with: { tag: 'gcc-13' }
+        with:
+          tag: 'gcc-13'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 12'
-        with: { tag: 'gcc-12' }
+        with:
+          tag: 'gcc-12'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 11'
-        with: { tag: 'gcc-11' }
+        with:
+          tag: 'gcc-11'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 10'
-        with: { tag: 'gcc-10' }
+        with:
+          tag: 'gcc-10'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 9'  
-        with: { tag: 'gcc-9'  }
+        with:
+          tag: 'gcc-9'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 8'
-        with: { tag: 'gcc-8'  }
+        with:
+          tag: 'gcc-8'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 7' 
-        with: { tag: 'gcc-7'  }
+        with:
+          tag: 'gcc-7'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
 
   compile6:
     name: 'omnibus compilations, #6'
@@ -302,6 +432,8 @@ jobs:
           with_gcc: 'gcc-13 -flto=auto -ffat-lto-objects -Werror=lto-type-mismatch'
           optflags: '-O2'
           enable_shared: false
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'ext/Setup'
         with:
@@ -310,28 +442,52 @@ jobs:
           launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 14'
-        with: { tag: 'gcc-14' }
+        with:
+          tag: 'gcc-14'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 13'
-        with: { tag: 'gcc-13' }
+        with:
+          tag: 'gcc-13'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 12'
-        with: { tag: 'gcc-12' }
+        with:
+          tag: 'gcc-12'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 11'
-        with: { tag: 'gcc-11' }
+        with:
+          tag: 'gcc-11'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 10'
-        with: { tag: 'gcc-10' }
+        with:
+          tag: 'gcc-10'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 9'  
-        with: { tag: 'gcc-9'  }
+        with:
+          tag: 'gcc-9'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 8'
-        with: { tag: 'gcc-8'  }
+        with:
+          tag: 'gcc-8'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 7' 
-        with: { tag: 'gcc-7'  }
+        with:
+          tag: 'gcc-7'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
 
   compile7:
     name: 'omnibus compilations, #7'
@@ -350,6 +506,8 @@ jobs:
           with_gcc: 'gcc-13 -flto=auto -ffat-lto-objects -Werror=lto-type-mismatch'
           optflags: '-O2'
           enable_shared: false
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'ext/Setup'
         with:
@@ -358,28 +516,52 @@ jobs:
           launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 14'
-        with: { tag: 'gcc-14' }
+        with:
+          tag: 'gcc-14'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 13'
-        with: { tag: 'gcc-13' }
+        with:
+          tag: 'gcc-13'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 12'
-        with: { tag: 'gcc-12' }
+        with:
+          tag: 'gcc-12'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 11'
-        with: { tag: 'gcc-11' }
+        with:
+          tag: 'gcc-11'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 10'
-        with: { tag: 'gcc-10' }
+        with:
+          tag: 'gcc-10'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 9'  
-        with: { tag: 'gcc-9'  }
+        with:
+          tag: 'gcc-9'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 8'
-        with: { tag: 'gcc-8'  }
+        with:
+          tag: 'gcc-8'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 7' 
-        with: { tag: 'gcc-7'  }
+        with:
+          tag: 'gcc-7'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
 
   compile8:
     name: 'omnibus compilations, #8'
@@ -398,6 +580,8 @@ jobs:
           with_gcc: 'gcc-13 -flto=auto -ffat-lto-objects -Werror=lto-type-mismatch'
           optflags: '-O2'
           enable_shared: false
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'ext/Setup'
         with:
@@ -406,28 +590,52 @@ jobs:
           launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 14'
-        with: { tag: 'gcc-14' }
+        with:
+          tag: 'gcc-14'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 13'
-        with: { tag: 'gcc-13' }
+        with:
+          tag: 'gcc-13'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 12'
-        with: { tag: 'gcc-12' }
+        with:
+          tag: 'gcc-12'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 11'
-        with: { tag: 'gcc-11' }
+        with:
+          tag: 'gcc-11'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 10'
-        with: { tag: 'gcc-10' }
+        with:
+          tag: 'gcc-10'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 9'  
-        with: { tag: 'gcc-9'  }
+        with:
+          tag: 'gcc-9'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 8'
-        with: { tag: 'gcc-8'  }
+        with:
+          tag: 'gcc-8'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 7' 
-        with: { tag: 'gcc-7'  }
+        with:
+          tag: 'gcc-7'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
 
   compile9:
     name: 'omnibus compilations, #9'
@@ -446,6 +654,8 @@ jobs:
           with_gcc: 'gcc-13 -flto=auto -ffat-lto-objects -Werror=lto-type-mismatch'
           optflags: '-O2'
           enable_shared: false
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'ext/Setup'
         with:
@@ -454,28 +664,52 @@ jobs:
           launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 14'
-        with: { tag: 'gcc-14' }
+        with:
+          tag: 'gcc-14'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 13'
-        with: { tag: 'gcc-13' }
+        with:
+          tag: 'gcc-13'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 12'
-        with: { tag: 'gcc-12' }
+        with:
+          tag: 'gcc-12'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 11'
-        with: { tag: 'gcc-11' }
+        with:
+          tag: 'gcc-11'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 10'
-        with: { tag: 'gcc-10' }
+        with:
+          tag: 'gcc-10'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 9'  
-        with: { tag: 'gcc-9'  }
+        with:
+          tag: 'gcc-9'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 8'
-        with: { tag: 'gcc-8'  }
+        with:
+          tag: 'gcc-8'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
       - uses: './.github/actions/compilers'
         name: 'GCC 7' 
-        with: { tag: 'gcc-7'  }
+        with:
+          tag: 'gcc-7'
+          launchable-token: ${{ secrets.LAUNCHABLE_TOKEN }}
+          launchable-url: ${{ secrets.LAUNCHABLE_BASE_URL }}
 
   compileX:
     name: 'omnibus compilations, #10'
