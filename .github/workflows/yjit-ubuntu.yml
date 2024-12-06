@@ -165,7 +165,7 @@ jobs:
       - name: Enable YJIT through ENV
         run: echo "RUBY_YJIT_ENABLE=1" >> $GITHUB_ENV
 
-      # Check that the binary was built with YJIT
+      # Check that the binary was built with YJI
       - name: Check YJIT enabled
         run: ./miniruby --yjit -v | grep "+YJIT"
 
