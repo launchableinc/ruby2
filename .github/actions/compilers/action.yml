@@ -79,7 +79,7 @@ runs:
 
     - name: Enable Launchable conditionally
       id: enable-launchable
-      run: echo "enable-launchable=false" >> $GITHUB_OUTPUT
+      run: echo "enable-launchable=true" >> $GITHUB_OUTPUT
       shell: bash
       if: >-
         ${{
@@ -122,4 +122,6 @@ runs:
         --env GITHUB_EVENT_NAME
         --env GITHUB_SHA
         --env GITHUB_HEAD_REF
+        --env LAUNCHABLE_TOKEN='${{ secrets.LAUNCHABLE_TOKEN }}'
+        --env LAUNCHABLE_BASE_URL='${{ secrets.LAUNCHABLE_BASE_URL }}'
         'ghcr.io/ruby/ruby-ci-image:${{ inputs.tag }}'
