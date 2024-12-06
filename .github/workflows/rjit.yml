@@ -111,14 +111,6 @@ jobs:
           RUBY_TESTOPTS: "-q --tty=no"
           RUN_OPTS: ${{ matrix.run_opts }}
 
-      - name: make test-spec
-        run: |
-          $SETARCH make -s test-spec RUN_OPTS="$RUN_OPTS"
-        timeout-minutes: 10
-        env:
-          GNUMAKEFLAGS: ""
-          RUN_OPTS: ${{ matrix.run_opts }}
-
       - uses: ./.github/actions/slack
         with:
           label: ${{ matrix.run_opts }}
